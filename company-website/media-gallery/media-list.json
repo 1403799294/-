@@ -1,0 +1,22 @@
+{
+    "mediaFiles": [
+        {
+            "id": 1,
+            "name": "示例图片1.jpg",
+            "type": "image/jpeg",
+            "url": "images/example1.jpg",
+            "thumbnail": "images/thumbnails/example1.jpg",
+            "size": 1024576,
+            "date": "2025-01-15T10:30:00Z"
+        },
+        {
+            "id": 2,
+            "name": "示例视频1.mp4",
+            "type": "video/mp4",
+            "url": "videos/example1.mp4",
+            "thumbnail": "videos/thumbnails/example1.jpg",
+            "size": 15728640,
+            "date": "2025-01-16T14:20:00Z"
+        }
+    ]
+} 

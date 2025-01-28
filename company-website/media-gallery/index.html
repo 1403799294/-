@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体库 - 图片和视频展示</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">媒体库</div>
+            <div class="nav-controls">
+                <button class="view-toggle" data-view="grid">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-toggle" data-view="list">
+                    <i class="fas fa-list"></i>
+                </button>
+                <select id="filterSelect" class="filter-select">
+                    <option value="all">全部</option>
+                    <option value="images">图片</option>
+                    <option value="videos">视频</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜索媒体文件...">
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="media-container grid-view" id="mediaContainer">
+            <!-- 媒体内容将通过JavaScript动态加载 -->
+        </div>
+
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>加载中...</span>
+        </div>
+    </main>
+
+    <!-- 媒体预览模态框 -->
+    <div class="modal" id="mediaModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <!-- 媒体内容将在这里显示 -->
+            </div>
+            <div class="modal-controls">
+                <button class="prev-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 媒体库. 保留所有权利.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

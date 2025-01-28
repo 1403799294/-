@@ -1,0 +1,314 @@
+/* 全局样式 */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-color: #dcdde1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* 导航栏样式 */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.view-toggle, #searchButton {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.view-toggle:hover, #searchButton:hover {
+    color: var(--primary-color);
+}
+
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* 搜索栏样式 */
+.search-container {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#searchInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* 媒体容器样式 */
+.media-container {
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.list-view {
+    grid-template-columns: 1fr;
+}
+
+/* 媒体卡片样式 */
+.media-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.media-thumbnail {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.media-thumbnail img, 
+.media-thumbnail video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-info {
+    padding: 1rem;
+}
+
+.media-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.media-meta {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* 加载动画 */
+.loading-spinner {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.loading-spinner.active {
+    display: flex;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.modal-body {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body img,
+.modal-body video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+}
+
+.prev-button,
+.next-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .search-container {
+        padding: 1rem;
+    }
+
+    .media-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .modal-controls {
+        padding: 0 0.5rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.media-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #ffffff;
+        --border-color: #333333;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container,
+    .search-container,
+    .media-card {
+        background-color: #2d2d2d;
+    }
+
+    #searchInput {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .filter-select {
+        background-color: #1a1a1a;
+        color: white;
+    }
+}
+
+/* 无障碍支持 */
+@media (prefers-reduced-motion: reduce) {
+    .media-card {
+        animation: none;
+    }
+
+    .media-card:hover {
+        transform: none;
+    }
+} 

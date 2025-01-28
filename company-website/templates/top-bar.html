@@ -1,0 +1,26 @@
+<!-- 顶部信息栏模板 -->
+<div class="top-bar" role="complementary" aria-label="天气和时间信息">
+    <div class="container">
+        <div class="weather-calendar">
+            <div class="weather-info" aria-live="polite">
+                <i class="fas fa-cloud-sun weather-icon icon icon-glow icon-hover-pulse" aria-hidden="true"></i>
+                <span id="weather" role="status">加载中...</span>
+                <span id="temperature" class="icon-hover-shake" aria-label="温度">--℃</span>
+            </div>
+            <div class="datetime-info">
+                <div class="calendar-info">
+                    <i class="fas fa-calendar-alt calendar-icon icon icon-3d icon-hover-rotate" aria-hidden="true"></i>
+                    <span id="date" role="status" aria-label="当前日期">--</span>
+                </div>
+                <div class="time-info">
+                    <i class="fas fa-clock clock-icon icon icon-3d" aria-hidden="true"></i>
+                    <span id="time" role="timer" aria-label="当前时间">--:--:--</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-info">
+            <i class="fas fa-map-marker-alt location-icon icon icon-gradient icon-interactive" aria-hidden="true"></i>
+            <span id="location" role="status" aria-label="当前位置">洛阳市</span>
+        </div>
+    </div>
+</div> 
