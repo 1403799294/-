@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系艺峰文化传媒中心，获取专业的舞美设计和活动策划服务。">
+    <title>联系我们 - 艺峰文化传媒中心</title>
+    
+    <!-- 资源预加载 -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/css/weather-time.css" as="style">
+    <link rel="preload" href="../assets/css/icons.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    <link rel="preload" href="../assets/js/weather-time.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" crossorigin>
+
+    <!-- 样式引入 -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/weather-time.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- 安全相关配置 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cdnjs.cloudflare.com *.qweather.com; font-src 'self' cdnjs.cloudflare.com data:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar" role="complementary" aria-label="天气和时间信息">
+        <div class="container">
+            <div class="weather-calendar">
+                <div class="weather-info" aria-live="polite">
+                    <i class="fas fa-cloud-sun weather-icon icon" aria-hidden="true"></i>
+                    <span id="weather" role="status">加载中...</span>
+                    <span id="temperature" aria-label="温度">--℃</span>
+                </div>
+                <div class="datetime-info">
+                    <div class="calendar-info">
+                        <i class="fas fa-calendar-alt calendar-icon icon" aria-hidden="true"></i>
+                        <span id="date" role="status" aria-label="当前日期">--</span>
+                    </div>
+                    <div class="time-info">
+                        <i class="fas fa-clock clock-icon icon" aria-hidden="true"></i>
+                        <span id="time" role="timer" aria-label="当前时间">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-info">
+                <i class="fas fa-map-marker-alt location-icon icon" aria-hidden="true"></i>
+                <span id="location" role="status" aria-label="当前位置">洛阳市</span>
+            </div>
+        </div>
+    </div>
+    <!-- 导航菜单部分 -->
+    <div class="nav-menu" role="menubar">
+        <a href="../index.html">首页</a>
+        <a href="../about/index.html">关于我们</a>
+        <a href="../products/index.html">产品服务</a>
+        <a href="../news/index.html">新闻中心</a>
+        <a href="index.html" class="active">联系我们</a>
+        <a href="../careers/index.html">加入我们</a>
+    </div>
+    // ... existing code ...
+</body>
+</html> 

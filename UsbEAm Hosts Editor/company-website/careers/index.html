@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="加入艺峰文化传媒中心，与我们一起打造精彩的舞台艺术，实现职业梦想。">
+    <meta name="keywords" content="艺峰文化,招聘信息,工作机会,人才招聘">
+    <title>加入我们 - 艺峰文化传媒中心</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/weather-time.css">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="weather-calendar">
+                <div class="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span id="weather">加载中...</span>
+                    <span id="temperature">--℃</span>
+                </div>
+                <div class="datetime-info">
+                    <div class="calendar-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="date">--</span>
+                    </div>
+                    <div class="time-info">
+                        <i class="fas fa-clock"></i>
+                        <span id="time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location">洛阳市</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面头部 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">艺峰文化传媒中心</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html">首页</a>
+                <a href="../about/index.html">关于我们</a>
+                <a href="../products/index.html">产品服务</a>
+                <a href="../news/index.html">新闻中心</a>
+                <a href="../contact/index.html">联系我们</a>
+                <a href="index.html" class="active">加入我们</a>
+            </div>
+            <div class="language-switch">
+                <a href="#" class="active">中文</a>
+                <a href="#">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 页面标题区域 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>加入我们</h1>
+                <p>与优秀的人一起，创造精彩的未来</p>
+            </div>
+        </section>
+
+        <!-- 公司文化与价值观 -->
+        <section class="company-culture">
+            <div class="container">
+                <h2>公司文化与价值观</h2>
+                <div class="culture-grid">
+                    <div class="culture-item">
+                        <i class="fas fa-users"></i>
+                        <h3>团队协作</h3>
+                        <p>我们崇尚团队精神，鼓励合作共赢</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>创新思维</h3>
+                        <p>保持开放的心态，勇于创新和尝试</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>持续成长</h3>
+                        <p>提供完善的培训体系，助力职业发展</p>
+                    </div>
+                    <div class="culture-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>工作生活平衡</h3>
+                        <p>注重员工身心健康，追求工作与生活的平衡</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 职位列表 -->
+        <section class="job-list">
+            <div class="container">
+                <h2>当前职位</h2>
+                <div class="job-categories">
+                    <button class="category-btn active" data-category="all">全部职位</button>
+                    <button class="category-btn" data-category="planning">活动策划</button>
+                    <button class="category-btn" data-category="design">设计创意</button>
+                    <button class="category-btn" data-category="marketing">市场营销</button>
+                    <button class="category-btn" data-category="operation">运营管理</button>
+                </div>
+                
+                <div class="job-items">
+                    <!-- 活动策划职位 -->
+                    <div class="job-item" data-category="planning">
+                        <div class="job-header">
+                            <h3>高级活动策划师</h3>
+                            <span class="job-type">全职</span>
+                        </div>
+                        <div class="job-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 工作地点：洛阳市</p>
+                            <p><i class="fas fa-graduation-cap"></i> 学历要求：本科及以上</p>
+                            <p><i class="fas fa-briefcase"></i> 经验要求：3年以上</p>
+                            <p><i class="fas fa-money-bill-wave"></i> 薪资范围：8k-15k</p>
+                        </div>
+                        <div class="job-description">
+                            <h4>岗位职责：</h4>
+                            <ul>
+                                <li>负责公司各类活动的创意策划和执行</li>
+                                <li>制定活动方案，把控活动预算和进度</li>
+                                <li>协调内外部资源，确保活动顺利进行</li>
+                                <li>总结活动效果，提供改进建议</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="apply-btn">立即申请</a>
+                    </div>
+
+                    <!-- 设计创意职位 -->
+                    <div class="job-item" data-category="design">
+                        <div class="job-header">
+                            <h3>视觉设计师</h3>
+                            <span class="job-type">全职</span>
+                        </div>
+                        <div class="job-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 工作地点：洛阳市</p>
+                            <p><i class="fas fa-graduation-cap"></i> 学历要求：本科及以上</p>
+                            <p><i class="fas fa-briefcase"></i> 经验要求：2年以上</p>
+                            <p><i class="fas fa-money-bill-wave"></i> 薪资范围：6k-12k</p>
+                        </div>
+                        <div class="job-description">
+                            <h4>岗位职责：</h4>
+                            <ul>
+                                <li>负责活动相关的视觉设计工作</li>
+                                <li>设计活动海报、宣传物料等</li>
+                                <li>参与品牌视觉形象设计</li>
+                                <li>配合团队完成设计需求</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="apply-btn">立即申请</a>
+                    </div>
+
+                    <!-- 市场营销职位 -->
+                    <div class="job-item" data-category="marketing">
+                        <div class="job-header">
+                            <h3>市场营销专员</h3>
+                            <span class="job-type">全职</span>
+                        </div>
+                        <div class="job-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 工作地点：洛阳市</p>
+                            <p><i class="fas fa-graduation-cap"></i> 学历要求：本科及以上</p>
+                            <p><i class="fas fa-briefcase"></i> 经验要求：1-3年</p>
+                            <p><i class="fas fa-money-bill-wave"></i> 薪资范围：5k-10k</p>
+                        </div>
+                        <div class="job-description">
+                            <h4>岗位职责：</h4>
+                            <ul>
+                                <li>负责公司产品的市场推广</li>
+                                <li>制定营销策略和执行方案</li>
+                                <li>开发和维护客户关系</li>
+                                <li>市场调研和竞品分析</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="apply-btn">立即申请</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 员工福利 -->
+        <section class="benefits">
+            <div class="container">
+                <h2>员工福利</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-medal"></i>
+                        <h3>具有竞争力的薪资</h3>
+                        <p>提供行业内具有竞争力的薪资待遇</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-gift"></i>
+                        <h3>节日福利</h3>
+                        <p>节假日礼品、生日礼物等暖心福利</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-umbrella"></i>
+                        <h3>完善的保险</h3>
+                        <p>五险一金、补充医疗保险</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>培训发展</h3>
+                        <p>专业的培训体系，助力职业发展</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 简历投递 -->
+        <section class="resume-upload">
+            <div class="container">
+                <h2>简历投递</h2>
+                <p>如果您对我们的职位感兴趣，欢迎投递简历</p>
+                <div class="upload-form-wrapper">
+                    <form id="resumeForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="name">姓名 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱 <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">电话 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">应聘职位 <span class="required">*</span></label>
+                            <select id="position" name="position" required>
+                                <option value="">请选择职位</option>
+                                <option value="planner">高级活动策划师</option>
+                                <option value="designer">视觉设计师</option>
+                                <option value="marketing">市场营销专员</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">上传简历 <span class="required">*</span></label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                            <p class="file-tip">支持PDF、Word格式，大小不超过10MB</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">求职意向</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            提交申请 <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-phone"></i> 电话1：177-6028-8419</p>
+                    <p><i class="fas fa-phone"></i> 电话2：130-1559-3388</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：1403799294@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：河南省洛阳市涧西区</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../about/index.html">关于我们</a></li>
+                        <li><a href="../products/index.html">产品服务</a></li>
+                        <li><a href="../news/index.html">新闻中心</a></li>
+                        <li><a href="../contact/index.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 艺峰文化传媒中心. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/weather-time.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html> 

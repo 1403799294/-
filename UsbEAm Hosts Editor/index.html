@@ -1,0 +1,160 @@
+<!-- 安全相关配置 -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' cdnjs.cloudflare.com *.qweather.com; font-src 'self' cdnjs.cloudflare.com data:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com">
+<!-- 资源预加载 -->
+<link rel="preload" href="assets/css/style.css" as="style">
+<link rel="preload" href="assets/css/weather-time.css" as="style">
+<link rel="preload" href="assets/css/icons.css" as="style">
+<link rel="preload" href="assets/js/main.js" as="script">
+<link rel="preload" href="assets/js/weather-time.js" as="script">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" crossorigin>
+
+<!-- 样式引入 -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/weather-time.css">
+<link rel="stylesheet" href="assets/css/icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- 社交媒体链接部分 -->
+<div class="social-links" role="navigation" aria-label="社交媒体链接">
+    <a href="#" class="social-link" aria-label="关注我们的微信" title="微信">
+        <i class="fab fa-weixin social-icon icon icon-interactive" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="social-link" aria-label="关注我们的微博" title="微博">
+        <i class="fab fa-weibo social-icon icon icon-interactive" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="social-link" aria-label="关注我们的领英" title="领英">
+        <i class="fab fa-linkedin social-icon icon icon-interactive" aria-hidden="true"></i>
+    </a>
+</div>
+
+<!-- 在线客服 -->
+<div class="customer-service" role="complementary" aria-label="在线客服">
+    <button class="cs-button icon-interactive" id="csButton" aria-expanded="false" aria-controls="csPanel">
+        <i class="fas fa-headset icon icon-lg" aria-hidden="true"></i>
+        <span>在线客服</span>
+    </button>
+    <div class="cs-panel" id="csPanel" aria-hidden="true">
+        <div class="cs-header">
+            <h3><i class="fas fa-comments icon icon-md" aria-hidden="true"></i> 在线客服</h3>
+            <button class="cs-close icon-interactive" id="csClose" aria-label="关闭客服窗口">
+                <i class="fas fa-times icon" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="cs-body">
+            <div class="cs-welcome" role="status">
+                <p><i class="fas fa-smile icon icon-md icon-success" aria-hidden="true"></i> 您好！请问有什么可以帮您？</p>
+                <p><i class="fas fa-user icon icon-md" aria-hidden="true"></i> 当前在线客服：小艺</p>
+            </div>
+            <div class="cs-messages" id="csMessages" role="log" aria-live="polite"></div>
+            <div class="cs-input">
+                <input type="text" id="csInput" placeholder="请输入您的问题..." aria-label="输入消息">
+                <button id="csSend" class="icon-interactive" aria-label="发送消息">
+                    <i class="fas fa-paper-plane icon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="cs-footer">
+            <p><i class="fas fa-clock icon icon-md" aria-hidden="true"></i> 工作时间：周一至周五 9:00-18:00</p>
+            <p><i class="fas fa-phone icon icon-md" aria-hidden="true"></i> 电话：<a href="tel:17760288419">177-6028-8419</a></p>
+            <div class="cs-quick-actions" role="group" aria-label="快捷操作">
+                <button class="quick-action" data-message="我想了解产品服务">
+                    <i class="fas fa-box icon icon-sm" aria-hidden="true"></i> 产品咨询
+                </button>
+                <button class="quick-action" data-message="我需要技术支持">
+                    <i class="fas fa-wrench icon icon-sm" aria-hidden="true"></i> 技术支持
+                </button>
+                <button class="quick-action" data-message="我想获取报价">
+                    <i class="fas fa-tag icon icon-sm" aria-hidden="true"></i> 获取报价
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页面底部 -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-address-card icon icon-md" aria-hidden="true"></i> 联系方式</h4>
+                <address>
+                    <p>
+                        <i class="fas fa-phone icon icon-sm" aria-hidden="true"></i>
+                        电话1：<a href="tel:17760288419" class="icon-interactive">177-6028-8419</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone icon icon-sm" aria-hidden="true"></i>
+                        电话2：<a href="tel:13015593388" class="icon-interactive">130-1559-3388</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope icon icon-sm" aria-hidden="true"></i>
+                        邮箱：<a href="mailto:1403799294@qq.com" class="icon-interactive">1403799294@qq.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt icon icon-sm" aria-hidden="true"></i>
+                        地址：<a href="https://maps.google.com/?q=河南省洛阳市涧西区" target="_blank" rel="noopener noreferrer" class="icon-interactive">河南省洛阳市涧西区</a>
+                    </p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-link icon icon-md" aria-hidden="true"></i> 快速链接</h4>
+                <nav aria-label="页脚导航">
+                    <ul>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="about/index.html">关于我们</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="products/index.html">产品服务</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="news/index.html">新闻中心</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="contact/index.html">联系我们</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="careers/index.html">加入我们</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="privacy.html">隐私政策</a></li>
+                        <li><i class="fas fa-angle-right icon icon-sm" aria-hidden="true"></i> <a href="terms.html">服务条款</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-share-alt icon icon-md" aria-hidden="true"></i> 关注我们</h4>
+                <div class="social-links" role="navigation" aria-label="社交媒体链接">
+                    <a href="#" class="social-link" aria-label="关注我们的微信" title="微信">
+                        <i class="fab fa-weixin social-icon icon icon-interactive" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="关注我们的微博" title="微博">
+                        <i class="fab fa-weibo social-icon icon icon-interactive" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="关注我们的领英" title="领英">
+                        <i class="fab fa-linkedin social-icon icon icon-interactive" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <i class="fas fa-copyright icon icon-sm" aria-hidden="true"></i>
+                2024 艺峰文化传媒中心. All rights reserved.
+                <a href="icp.html">豫ICP备xxxxxxxx号-1</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- 导航菜单部分 -->
+<div class="nav-menu" role="menubar">
+    <a href="index.html" class="active">首页</a>
+    <a href="about/index.html">关于我们</a>
+    <a href="products/index.html">产品服务</a>
+    <a href="news/index.html">新闻中心</a>
+    <a href="contact/index.html">联系我们</a>
+    <a href="careers/index.html">加入我们</a>
+</div>
+
+<!-- 页脚链接部分 -->
+<div class="footer-section">
+    <h4>快速链接</h4>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about/index.html">关于我们</a></li>
+        <li><a href="products/index.html">产品服务</a></li>
+        <li><a href="news/index.html">新闻中心</a></li>
+        <li><a href="contact/index.html">联系我们</a></li>
+        <li><a href="careers/index.html">加入我们</a></li>
+    </ul>
+</div> 

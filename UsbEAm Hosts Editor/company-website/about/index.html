@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="了解艺峰文化传媒中心的发展历程、企业文化、团队优势。十余年专注舞台美术设计，打造专业舞美团队。">
+    <meta name="keywords" content="艺峰文化,公司简介,发展历程,企业文化,团队介绍,舞台设计,文化传媒,河南舞美">
+    <meta name="author" content="艺峰文化传媒中心">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:title" content="关于我们 - 艺峰文化传媒中心 | 专业的舞美设计团队">
+    <meta property="og:description" content="了解艺峰文化传媒中心的发展历程、企业文化、团队优势。十余年专注舞台美术设计，打造专业舞美团队。">
+    <meta property="og:image" content="../assets/images/about-og.jpg">
+    <meta property="og:url" content="https://www.example.com/about/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="关于我们 - 艺峰文化传媒中心 | 专业的舞美设计团队">
+    <meta name="twitter:description" content="了解艺峰文化传媒中心的发展历程、企业文化、团队优势。十余年专注舞台美术设计，打造专业舞美团队。">
+    <meta name="twitter:image" content="../assets/images/about-og.jpg">
+
+    <!-- 安全相关配置 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cdnjs.cloudflare.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>关于我们 - 艺峰文化传媒中心 | 专业的舞美设计团队</title>
+
+    <!-- 资源预加载 -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
+    <!-- DNS预解析 -->
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/weather-time.css">
+    
+    <!-- 天气和日历组件样式 -->
+    <style>
+        .top-bar {
+            background: #f8f9fa;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .weather-calendar {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .weather-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .weather-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .datetime-info {
+            display: flex;
+            gap: 15px;
+        }
+        .calendar-info, .time-info {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "艺峰文化传媒中心",
+            "description": "艺峰文化传媒中心成立于2010年，是一家专注于舞台美术设计与制作的专业公司。",
+            "foundingDate": "2010",
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": "20",
+                "maxValue": "50"
+            },
+            "award": [
+                "年度最具创新力文化传媒企业",
+                "河南省优秀文化企业"
+            ]
+        }
+    }
+    </script>
+
+    <!-- PWA支持 -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="艺峰文化">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="weather-calendar">
+                <div class="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span id="weather">加载中...</span>
+                    <span id="temperature">--℃</span>
+                </div>
+                <div class="datetime-info">
+                    <div class="calendar-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="date">--</span>
+                    </div>
+                    <div class="time-info">
+                        <i class="fas fa-clock"></i>
+                        <span id="time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location">洛阳市</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="主导航">
+            <div class="logo">
+                <a href="../index.html" aria-label="返回首页">艺峰文化传媒中心</a>
+            </div>
+            <div class="nav-menu" role="menubar">
+                <a href="../index.html" role="menuitem">首页</a>
+                <a href="index.html" class="active" role="menuitem" aria-current="page">关于我们</a>
+                <a href="../products/index.html" role="menuitem">产品服务</a>
+                <a href="../news/index.html" role="menuitem">新闻中心</a>
+                <a href="../contact/index.html" role="menuitem">联系我们</a>
+                <a href="../careers/index.html" role="menuitem">加入我们</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>关于我们</h1>
+                <p>了解我们的历史、文化与愿景</p>
+            </div>
+        </section>
+
+        <section class="company-history" aria-labelledby="history-title">
+            <div class="container">
+                <h2 id="history-title">发展历程</h2>
+                <div class="timeline" role="list">
+                    <div class="timeline-item" role="listitem">
+                        <div class="year">2010</div>
+                        <div class="content">
+                            <h3>公司成立</h3>
+                            <p>艺峰文化传媒中心正式成立，开始专注于舞台美术设计领域。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" role="listitem">
+                        <div class="year">2015</div>
+                        <div class="content">
+                            <h3>业务扩展</h3>
+                            <p>成功拓展全省市场，建立多个分支机构，服务范围覆盖整个河南省。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" role="listitem">
+                        <div class="year">2020</div>
+                        <div class="content">
+                            <h3>技术创新</h3>
+                            <p>引进国际先进舞台技术设备，获得多项技术专利认证。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" role="listitem">
+                        <div class="year">2024</div>
+                        <div class="content">
+                            <h3>品牌升级</h3>
+                            <p>完成品牌升级，进一步提升服务质量和品牌影响力。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-intro" aria-labelledby="team-title">
+            <div class="container">
+                <h2 id="team-title">专业团队</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="../assets/images/team/director.jpg" alt="艺术总监" loading="lazy"
+                             srcset="../assets/images/team/director-small.jpg 300w,
+                                     ../assets/images/team/director.jpg 600w"
+                             sizes="(max-width: 768px) 300px, 600px">
+                        <h3>张总监</h3>
+                        <p>艺术总监</p>
+                        <p>20年舞台艺术设计经验</p>
+                    </div>
+                    <!-- 其他团队成员... -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-phone"></i> 电话1：177-6028-8419</p>
+                    <p><i class="fas fa-phone"></i> 电话2：130-1559-3388</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：1403799294@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：河南省洛阳市涧西区</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">关于我们</a></li>
+                        <li><a href="../products/index.html">产品服务</a></li>
+                        <li><a href="../news/index.html">新闻中心</a></li>
+                        <li><a href="../contact/index.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 艺峰文化传媒中心. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 加载状态指示器 -->
+    <div id="loading-indicator" class="loading-indicator" role="alert" aria-busy="true" hidden>
+        <div class="spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- 错误提示框 -->
+    <div id="error-message" class="error-message" role="alert" aria-live="assertive" hidden>
+        <div class="error-content">
+            <i class="fas fa-exclamation-circle"></i>
+            <p></p>
+            <button class="close-error" aria-label="关闭错误提示">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="返回顶部" hidden>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="../assets/js/weather-time.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html> 

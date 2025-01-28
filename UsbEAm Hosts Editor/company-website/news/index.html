@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="艺峰文化传媒中心新闻中心，提供最新公司动态、行业资讯、活动案例等信息。">
+    <meta name="keywords" content="艺峰文化,公司新闻,行业资讯,活动案例,舞台设计,庆典活动">
+    <title>新闻中心 - 艺峰文化传媒中心</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/weather-time.css">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="weather-calendar">
+                <div class="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span id="weather">加载中...</span>
+                    <span id="temperature">--℃</span>
+                </div>
+                <div class="datetime-info">
+                    <div class="calendar-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="date">--</span>
+                    </div>
+                    <div class="time-info">
+                        <i class="fas fa-clock"></i>
+                        <span id="time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location">洛阳市</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面头部 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">艺峰文化传媒中心</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html">首页</a>
+                <a href="../about/index.html">关于我们</a>
+                <a href="../products/index.html">产品服务</a>
+                <a href="index.html" class="active">新闻中心</a>
+                <a href="../contact/index.html">联系我们</a>
+                <a href="../careers/index.html">加入我们</a>
+            </div>
+            <div class="language-switch">
+                <a href="#" class="active">中文</a>
+                <a href="#">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="news-main">
+        <!-- 新闻分类导航 -->
+        <div class="news-nav">
+            <div class="container">
+                <ul class="news-categories">
+                    <li class="active"><a href="#all">全部新闻</a></li>
+                    <li><a href="#company">公司动态</a></li>
+                    <li><a href="#industry">行业资讯</a></li>
+                    <li><a href="#cases">成功案例</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 新闻列表 -->
+        <section class="news-section">
+            <div class="container">
+                <!-- 公司动态 -->
+                <div class="news-group" id="company">
+                    <h2>公司动态</h2>
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/company-1.jpg" alt="公司荣获奖项">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-03-15</span>
+                                <h3>艺峰庆典荣获"2024年度最具创新力文化传媒企业"称号</h3>
+                                <p>在近日举办的2024河南文化创意产业发展大会上，我公司凭借在舞美设计领域的创新成就，荣获"年度最具创新力文化传媒企业"称号。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/company-2.jpg" alt="技术升级">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-02-28</span>
+                                <h3>艺峰庆典完成新一轮设备升级，引进国际顶尖舞台技术</h3>
+                                <p>为提供更优质的服务，公司投资500万元引进最新的舞台灯光、音响设备，进一步提升舞美制作水平。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 行业资讯 -->
+                <div class="news-group" id="industry">
+                    <h2>行业资讯</h2>
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/industry-1.jpg" alt="行业趋势">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-03-10</span>
+                                <h3>2024年舞美设计行业发展趋势分析</h3>
+                                <p>随着科技的发展，LED显示技术、全息投影、AR/VR等新技术在舞美设计中的应用日益广泛，为观众带来更震撼的视觉体验。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/industry-2.jpg" alt="技术创新">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-02-20</span>
+                                <h3>数字化技术革新推动舞台艺术创新发展</h3>
+                                <p>人工智能、大数据等数字化技术在舞台设计中的应用，正在改变传统舞台艺术的表现形式。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 成功案例 -->
+                <div class="news-group" id="cases">
+                    <h2>成功案例</h2>
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/case-1.jpg" alt="演唱会案例">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-01-15</span>
+                                <h3>洛阳新年音乐盛典完美落幕</h3>
+                                <p>由我公司承办的2024洛阳新年音乐盛典圆满结束，创新的舞美设计获得一致好评。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="../assets/images/news/case-2.jpg" alt="企业年会">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">2024-01-08</span>
+                                <h3>某知名企业集团年会圆满成功</h3>
+                                <p>为某大型企业集团打造的年会活动，通过创新的舞美设计和完善的活动策划，获得客户高度认可。</p>
+                                <a href="#" class="read-more">查看详情</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分页 -->
+        <div class="pagination">
+            <div class="container">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">下一页</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-phone"></i> 电话：177-6028-8419</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：1403799294@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：河南省洛阳市涧西区</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../about/index.html">关于我们</a></li>
+                        <li><a href="../products/index.html">产品服务</a></li>
+                        <li><a href="index.html">新闻中心</a></li>
+                        <li><a href="../contact/index.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 艺峰文化传媒中心. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 在main.js之前添加weather-time.js -->
+    <script src="../assets/js/weather-time.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html> 

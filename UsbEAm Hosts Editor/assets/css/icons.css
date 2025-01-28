@@ -1,0 +1,532 @@
+/* 主题颜色变量 */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --weather-color: #e67e22;
+    --time-color: #3498db;
+    --location-color: #e74c3c;
+}
+
+/* CSS 功能检测 */
+@supports (display: flex) {
+    .icon {
+        display: inline-flex;
+    }
+}
+
+@supports not (display: flex) {
+    .icon {
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+    }
+}
+
+/* 图标基础样式 */
+.icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 图标大小变体 */
+.icon-sm { font-size: 0.875rem; }
+.icon-md { font-size: 1rem; }
+.icon-lg { font-size: 1.25rem; }
+.icon-xl { font-size: 1.5rem; }
+
+/* 图标颜色变体 */
+.icon-primary { 
+    color: var(--primary-color, #007bff); 
+    color: rgb(0, 123, 255);
+}
+.icon-success { 
+    color: var(--success-color, #28a745);
+    color: rgb(40, 167, 69);
+}
+.icon-warning { 
+    color: var(--warning-color, #ffc107);
+    color: rgb(255, 193, 7);
+}
+.icon-danger { 
+    color: var(--danger-color, #dc3545);
+    color: rgb(220, 53, 69);
+}
+.icon-info { 
+    color: var(--info-color, #17a2b8);
+    color: rgb(23, 162, 184);
+}
+
+/* 天气图标特殊样式 */
+.weather-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: var(--weather-color, #e67e22);
+    color: rgb(230, 126, 34);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    will-change: transform;
+}
+
+.weather-icon:hover {
+    -webkit-animation: weatherBounce 1s infinite;
+    animation: weatherBounce 1s infinite;
+}
+
+/* 时间日期图标样式 */
+.calendar-icon,
+.clock-icon {
+    margin-right: 0.4rem;
+    color: var(--time-color);
+}
+
+.clock-icon {
+    animation: clockTick 2s linear infinite;
+}
+
+/* 位置图标样式 */
+.location-icon {
+    color: var(--location-color);
+    margin-right: 0.3rem;
+    animation: locationPulse 2s infinite;
+}
+
+/* 社交媒体图标样式 */
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    color: var(--primary-color);
+}
+
+/* 导航图标样式 */
+.nav-icon {
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon:hover {
+    transform: rotate(15deg);
+}
+
+/* 动画效果 */
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes weatherBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes clockTick {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes locationPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 交互效果类 */
+.icon-interactive {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-interactive:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.icon-interactive:active {
+    transform: scale(0.95);
+}
+
+/* 加载动画 */
+.icon-loading {
+    -webkit-animation: loadingPulse 1.5s ease-in-out infinite;
+    animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+/* 悬停效果 */
+.icon-hover-rotate:hover {
+    transform: rotate(180deg);
+}
+
+.icon-hover-shake:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+.icon-hover-pulse:hover {
+    animation: pulse 1s infinite;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .icon-lg { font-size: 1.1rem; }
+    .icon-xl { font-size: 1.25rem; }
+    .social-icon { font-size: 1.25rem; }
+    
+    /* 移动端优化动画 */
+    .weather-icon:hover,
+    .social-icon:hover,
+    .nav-icon:hover {
+        animation: none;
+        transform: none;
+    }
+    
+    /* 移动端触摸反馈 */
+    .icon-interactive {
+        transition: transform 0.2s ease;
+    }
+    
+    .icon-interactive:active {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    
+    /* 移动端性能优化 */
+    .icon {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+    
+    /* 触摸设备优化 */
+    @media (hover: none) {
+        .weather-icon:hover {
+            -webkit-animation: none;
+            animation: none;
+        }
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #4dabf7;
+        --success-color: #51cf66;
+        --warning-color: #ffd43b;
+        --danger-color: #ff6b6b;
+        --info-color: #22b8cf;
+        --weather-color: #ffa94d;
+        --time-color: #74c0fc;
+        --location-color: #ff8787;
+    }
+    .icon-gradient {
+        background-image: -webkit-linear-gradient(45deg, var(--primary-color, #4dabf7), var(--info-color, #22b8cf));
+        background-image: -moz-linear-gradient(45deg, var(--primary-color, #4dabf7), var(--info-color, #22b8cf));
+        background-image: -o-linear-gradient(45deg, var(--primary-color, #4dabf7), var(--info-color, #22b8cf));
+        background-image: linear-gradient(45deg, var(--primary-color, #4dabf7), var(--info-color, #22b8cf));
+    }
+}
+
+/* 新增动画效果 */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 特殊效果类 */
+.icon-3d {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    -webkit-text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    -moz-text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.icon-glow {
+    -webkit-filter: drop-shadow(0 0 2px currentColor);
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+.icon-gradient {
+    background-image: -webkit-linear-gradient(45deg, var(--primary-color, #007bff), var(--info-color, #17a2b8));
+    background-image: -moz-linear-gradient(45deg, var(--primary-color, #007bff), var(--info-color, #17a2b8));
+    background-image: -o-linear-gradient(45deg, var(--primary-color, #007bff), var(--info-color, #17a2b8));
+    background-image: linear-gradient(45deg, var(--primary-color, #007bff), var(--info-color, #17a2b8));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* 降级方案 */
+@supports not (background-clip: text) {
+    .icon-gradient {
+        background: none;
+        color: var(--primary-color, #007bff);
+    }
+}
+
+/* IE11 特定样式 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .icon {
+        display: inline-block;
+    }
+    .icon-gradient {
+        background: none;
+        color: var(--primary-color, #007bff);
+    }
+}
+
+/* Safari 特定样式 */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .icon-gradient {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+/* Firefox 特定样式 */
+@-moz-document url-prefix() {
+    .icon-gradient {
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    .icon {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .icon-gradient {
+        background: none !important;
+        color: #000 !important;
+    }
+}
+
+/* CSS 功能检测 - 动画 */
+@supports (animation: none) {
+    .icon-loading {
+        animation: loadingPulse 1.5s ease-in-out infinite;
+    }
+}
+
+@supports not (animation: none) {
+    .icon-loading {
+        opacity: 0.7;
+    }
+}
+
+/* 无障碍支持 */
+@media (prefers-reduced-motion: reduce) {
+    .icon {
+        -webkit-transition: none !important;
+        transition: none !important;
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+}
+
+/* 天气图标增强样式 */
+.weather-icon.fa-sun {
+    color: #ffd700;
+    animation: rotateWeather 8s linear infinite;
+}
+
+.weather-icon.fa-cloud-sun {
+    color: #f39c12;
+    animation: glowPulse 3s infinite;
+}
+
+.weather-icon.fa-cloud {
+    color: #7f8c8d;
+    animation: scaleBreathing 4s ease-in-out infinite;
+}
+
+.weather-icon.fa-cloud-rain {
+    color: #3498db;
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.weather-icon.fa-cloud-showers-heavy {
+    color: #2980b9;
+    animation: floatUpDown 1.5s ease-in-out infinite;
+}
+
+.weather-icon.fa-snowflake {
+    color: #00bcd4;
+    animation: rotateWeather 6s linear infinite;
+}
+
+.weather-icon.fa-bolt {
+    color: #f1c40f;
+    animation: glowPulse 1s infinite;
+}
+
+.weather-icon.fa-wind {
+    color: #95a5a6;
+    animation: rotateWeather 3s linear infinite;
+}
+
+.weather-icon.fa-temperature-high {
+    color: #e74c3c;
+    animation: glowPulse 2s infinite;
+}
+
+.weather-icon.fa-temperature-low {
+    color: #3498db;
+    animation: glowPulse 2s infinite;
+}
+
+/* 加载状态优化 */
+.icon-loading.fa-spinner {
+    color: var(--info-color);
+}
+
+/* 错误状态优化 */
+.icon-error {
+    animation: shake 0.5s ease-in-out;
+    color: var(--danger-color);
+}
+
+/* 成功状态优化 */
+.icon-success {
+    animation: pulse 0.5s ease-in-out;
+    color: var(--success-color);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .weather-icon {
+        font-size: 1rem;
+    }
+    
+    .error-message {
+        font-size: 0.8em;
+        padding: 3px 6px;
+    }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    .error-message {
+        background-color: rgba(220, 53, 69, 0.2);
+        border-color: rgba(220, 53, 69, 0.3);
+    }
+    
+    .weather-icon.fa-sun {
+        color: #ffd700;
+    }
+    
+    .weather-icon.fa-cloud-sun {
+        color: #f39c12;
+    }
+    
+    .weather-icon.fa-cloud {
+        color: #bdc3c7;
+    }
+    
+    .weather-icon.fa-cloud-rain {
+        color: #3498db;
+    }
+    
+    .weather-icon.fa-snowflake {
+        color: #00bcd4;
+    }
+}
+
+/* 添加新的动画效果 */
+@keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes rotateWeather {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { filter: drop-shadow(0 0 2px currentColor); }
+    50% { filter: drop-shadow(0 0 8px currentColor); }
+}
+
+@keyframes scaleBreathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* 错误提示样式 */
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.error-message:hover {
+    background-color: rgba(220, 53, 69, 0.15);
+    border-color: rgba(220, 53, 69, 0.3);
+} 

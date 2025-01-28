@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系艺峰文化传媒中心，获取专业的舞美设计和活动策划服务。">
+    <meta name="keywords" content="艺峰文化,联系我们,地址,电话,邮箱">
+    <title>联系我们 - 艺峰文化传媒中心</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/weather-time.css">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="weather-calendar">
+                <div class="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span id="weather">加载中...</span>
+                    <span id="temperature">--℃</span>
+                </div>
+                <div class="datetime-info">
+                    <div class="calendar-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="date">--</span>
+                    </div>
+                    <div class="time-info">
+                        <i class="fas fa-clock"></i>
+                        <span id="time">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location">洛阳市</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面头部 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">艺峰文化传媒中心</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html">首页</a>
+                <a href="../about/index.html">关于我们</a>
+                <a href="../products/index.html">产品服务</a>
+                <a href="../news/index.html">新闻中心</a>
+                <a href="index.html" class="active">联系我们</a>
+                <a href="../careers/index.html">加入我们</a>
+            </div>
+            <div class="language-switch">
+                <a href="#" class="active">中文</a>
+                <a href="#">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 页面标题区域 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>联系我们</h1>
+                <p>艺峰文化传媒中心期待与您合作，为您提供专业的舞美设计和活动策划服务。</p>
+            </div>
+        </section>
+
+        <!-- 联系信息 -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>公司地址</h3>
+                        <p>河南省洛阳市涧西区</p>
+                        <p>邮编：471000</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>联系电话</h3>
+                        <p>电话1：177-6028-8419</p>
+                        <p>电话2：130-1559-3388</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>电子邮箱</h3>
+                        <p>市场合作：1403799294@qq.com</p>
+                        <p>技术支持：1403799294@qq.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="far fa-clock"></i>
+                        <h3>工作时间</h3>
+                        <p>周一至周五：9:00-18:00</p>
+                        <p>节假日：请提前预约</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系表单和地图 -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- 联系表单 -->
+                    <div class="contact-form-wrapper">
+                        <h2>在线留言</h2>
+                        <p>如果您有任何问题或建议，请填写以下表单，我们会尽快与您联系。</p>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">姓名 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱 <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">电话</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">主题 <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">请选择</option>
+                                    <option value="business">商务合作</option>
+                                    <option value="support">技术支持</option>
+                                    <option value="feedback">产品反馈</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">留言内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="submit-btn">
+                                    提交留言 <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 地图 -->
+                    <div class="map-wrapper">
+                        <h2>公司位置</h2>
+                        <div class="map-container">
+                            <!-- 这里可以嵌入地图，例如百度地图或高德地图 -->
+                            <div id="companyMap" class="map-frame">
+                                <!-- 地图将通过JavaScript加载 -->
+                            </div>
+                        </div>
+                        <div class="map-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 地址：河南省洛阳市涧西区</p>
+                            <p><i class="fas fa-bus"></i> 公交：多路公交可达</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 全球分支机构 -->
+        <section class="global-offices">
+            <div class="container">
+                <h2>全球分支机构</h2>
+                <div class="offices-grid">
+                    <div class="office-item">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>洛阳总部</h3>
+                        <p>河南省洛阳市涧西区</p>
+                        <p>电话：177-6028-8419</p>
+                    </div>
+                    <div class="office-item">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>洛阳分公司</h3>
+                        <p>河南省洛阳市涧西区</p>
+                        <p>电话：130-1559-3388</p>
+                    </div>
+                    <div class="office-item">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>洛阳研发中心</h3>
+                        <p>河南省洛阳市涧西区</p>
+                        <p>电话：177-6028-8419</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关注我们 -->
+        <section class="follow-us">
+            <div class="container">
+                <h2>关注我们</h2>
+                <p>通过以下方式了解更多资讯</p>
+                <div class="social-grid">
+                    <div class="social-item">
+                        <div class="qrcode">
+                            <img src="../assets/images/wechat-qr.jpg" alt="微信公众号二维码">
+                        </div>
+                        <h3>微信公众号</h3>
+                        <p>扫码关注获取最新动态</p>
+                    </div>
+                    <div class="social-item">
+                        <div class="qrcode">
+                            <img src="../assets/images/weibo-qr.jpg" alt="微博二维码">
+                        </div>
+                        <h3>官方微博</h3>
+                        <p>关注我们的微博账号</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-phone"></i> 电话1：177-6028-8419</p>
+                    <p><i class="fas fa-phone"></i> 电话2：130-1559-3388</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：1403799294@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：河南省洛阳市涧西区</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../about/index.html">关于我们</a></li>
+                        <li><a href="../products/index.html">产品服务</a></li>
+                        <li><a href="../news/index.html">新闻中心</a></li>
+                        <li><a href="index.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 艺峰文化传媒中心. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 在main.js之前添加weather-time.js -->
+    <script src="../assets/js/weather-time.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html> 

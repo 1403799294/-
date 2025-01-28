@@ -1,0 +1,87 @@
+.top-bar {
+    background: #f8f9fa;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.weather-calendar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-info i {
+    color: #f39c12;
+}
+
+.weather-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.datetime-info {
+    display: flex;
+    gap: 15px;
+}
+
+.calendar-info, .time-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.calendar-info i {
+    color: #3498db;
+}
+
+.time-info i {
+    color: #2ecc71;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.location-info i {
+    color: #e74c3c;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .top-bar {
+        font-size: 12px;
+    }
+    
+    .weather-calendar {
+        gap: 10px;
+    }
+    
+    .datetime-info {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .location-info span {
+        display: none;
+    }
+} 

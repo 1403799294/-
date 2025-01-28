@@ -1,0 +1,14 @@
+{
+  "name": "media-gallery",
+  "version": "1.0.0",
+  "description": "媒体文件展示网页",
+  "main": "scan-media.js",
+  "scripts": {
+    "scan": "node scan-media.js",
+    "start": "http-server . -p 3000 -c-1"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6",
+    "http-server": "^14.1.1"
+  }
+} 
